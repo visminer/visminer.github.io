@@ -1,2 +1,257 @@
-<h1>VisMiner project page at GitHub.</h1>
-<h2>Work in progress!!!</h2>
+<!DOCTYPE HTML>
+<!--
+	Stellar by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>VisminerTD | Identification & Monitoring of TD</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<h1>VisminerTD</h1>
+						<p style="text-align: center">A Tool for Automatic Identification and Interactive Monitoring of the Evolution of Technical Debt Items</p>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li><a href="#intro" class="active">Overview</a></li>
+							<li><a href="#first">VisminerTD Views</a></li>
+							<li><a href="#second">Features</a></li>
+							<li><a href="#cta">Publications</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Introduction -->
+							<section id="intro" class="main">
+								<div class="spotlight">
+									<div class="content">
+										<header class="major">
+											<h2>VisminerTD Overview</h2>
+										</header>
+										<p>VisminerTD is a tool that aims to support the activities of identification and monitoring of TD using software visualization resources. VisminerTD implements a new TD identification strategy by combining information extracted from software metrics and source code comments, monitoring the evolution of TD items through different versions of the software.</p>
+										<p>VisminerTD uses software metrics, duplicated code occurrences, style problems, ASA issues and code comments to find TD indicators. The combined analysis of TD indicators allows development teams to identify more precisely TD items in the source code, calling their attention to specific parts of the project. Once a TD item is detected, VisminerTD allows the user to follow the evolution of that item and its indicators over the project life cycle. Its visual metaphors support the monitoring of the evolution of TD items through the versions of a software, identifying when they incur, and if their indicators are increasing or if they are being paid off.</p>
+
+									</div>
+									<span class="image">
+										<img src="images/figure1.png" alt="" />
+										<img style="padding-top: 25px;" src="images/figure2.png" alt="" />
+										<img style="padding-top: 25px;" src="images/figure3.png" alt="" />
+									</span>
+								</div>
+							</section>
+
+						<!-- First Section -->
+							<section id="first" class="main special">
+								<header class="major">
+									<h2>VisminerTD Views</h2>
+								</header>
+								<ul class="features">
+									<li>
+										<span class="icon major style1 fa-search"></span>
+										<h2>TDAnalyzer</h2>
+										<p>TDAnalyzer View allows the identification of TD items. It uses code smells, software metrics, style problems in Java code, ASA issues, source code comments, among others as debt indicator information. The TDAnalyzer shows all TD items detected in a software. The TDAnalyzer also has a detail-on-demand view where the user can analyze detailed information of a TD item.</p>
+									</li>
+									<li>
+										<span class="icon major style3 fa-line-chart"></span>
+										<h2>TDEvolution</h2>
+										<p>TDEvolution View allows the understanding of how software is evolving over time regarding identified TD items. Using this view, the user can visualize differences between two selected versions, and identify when positive or negative changes occur, and whether they affect the project evolution or not. TDEvolution uses a differential absolute strategy, which compares two versions of software at a time.</p>
+									</li>
+									<li>
+										<span class="icon major style5 fa-usd"></span>
+										<h2>TDManagement</h2>
+										<p>TDManagement View is a module also responsible for assisting in TD monitoring. The TD items are presented using the Kanban concept with three panels (TO DO, DOING and DONE). Each TD type of the file, identified by the type and name of the file, is represented as a card. In this view, the user can visualize the TD items of the project that had their debt types marked "To Do", "Doing" or "Done" in TDAnalyzer.</p>
+									</li>
+								</ul>
+							</section>
+
+						<!-- Second Section -->
+							<section id="second" class="main special">
+								<header class="major">
+									<h2>Main Features</h2>
+									<p>VisminerTD is an open source web tool that has multiple visual perspectives and different visual strategies of analysis to support development teams in activities of identifying and monitoring the evolution of TD items. VisminerTD runs on top of RepositoryMiner (RM). The RM is responsible for extraction of metrics and comments from source code repositories.</p>
+									<br />
+									<p style="font-weight: bold;">The main RM  and VisminerTD features are:</p>
+								</header>
+								<ul class="statistics">
+									<li class="style1">
+										<span class="icon">19</span>
+										<strong>Software Metrics</strong>
+									</li>
+									<li class="style2">
+										<span class="icon fa-comments"></span>
+										<strong>Code Comment Analysis</strong>
+									</li>
+									<li class="style3">
+										<span class="icon">7</span>
+										<strong>Code Smells</strong>
+									</li>
+									<li class="style4">
+										<span class="icon fa-code"></span>
+										<strong>Duplicated Code Detection</strong>
+									</li>
+									<li class="style5">
+										<span class="icon">9</span>
+										<strong>Technical Debts</strong>
+									</li>
+								</ul>
+								<ul>
+									<li>
+										<p>
+										Mining local (e.g. projects stored on GIT) and remote software repositories (e.g. issues and milestones stored on github.com);
+										</p>
+									</li>
+									<li>
+										<p>
+										Calculating 19 software metrics: AMW, ATFD, CYCLO, FDP, LAA, LOC, LVAR, MAXNESTING, MLOC, NOA, NOAM, NOAV, NOM, NOPA, NProtM, PAR, TCC, WMC, and WOC;
+										</p>
+									</li>
+									<li>
+										<p>
+										Detecting seven types of code smells: brain class, brain method, conditional complexity, data class, feature envy, god class, and long method;
+										</p>
+									</li>
+									<li>
+										<p>
+											Detecting duplicate code using the Copy / Paste Detector (CPD) functionality of the PMD tool (PMD, 2018);
+										</p>
+									</li>
+									<li>
+										<p>
+											Detecting possible defects in Java projects through static code analysis using the FindBugs tool (FindBugs, 2018);
+										</p>
+									</li>
+									<li>
+										<p>
+											Detecting style problems in Java code using the CheckStyle tool (CheckStyle, 2018);
+
+										</p>
+									</li>
+									<li>
+										<p>
+											Detecting comments in Java code that contain some indication of the existence of TD items using the eXcomment tool;
+										</p>
+									</li>
+									<li>
+										<p>
+											Detecting nine TD types: architecture, build, code, design, defect, documentation, requirements, people and test;
+										</p>
+									</li>
+								</ul>
+							</section>
+
+						<!-- Get Started -->
+							<section id="cta" class="main special">
+								<header class="major">
+									<h2>Publications</h2>
+										<ul>
+											<li>
+												<p>
+													Mendes T. S., David P. Gonçalves; Gomes F., Spínola R.; Novais R., Mendonça M., VisminerTD: Uma Ferramenta para Identificação Automática e Monitoramento Interativo de Dívida Técnica, V Workshop de Visualização de Software, Evolução e Manutenção / VIII Congresso Brasileiro de Software, 2017.
+												</p>
+											</li>
+											<li>
+												<p>
+													 Gomes F., Mendes T. S., Carvalho L., Spínola R.; Novais R., Mendonça M., RepositoryMiner – uma ferramenta extensível de mineração de repositórios de software para identificação automática de Dívida Técnica, Congresso Brasileiro de Software: Teoria e Prática (CBSoft), Salão de Ferramentas, 2017.
+												</p>
+											</li>
+											<li>
+												<p>
+													Alves, Nicolli S.R.; Mendes, Thiago S.; De Mendonça, Manoel G.; Spínola, Rodrigo O.; Shull, Forest; Seaman, Carolyn. Identification and management of technical debt: A systematic mapping study. Information and Software Technology, v. 70, p. 100-121, 2016.
+												</p>
+											</li>
+											<li>
+												<p>
+													Mendes T.S., Soraes H., Farias Mário, Mendonça Manoel, Kalinowski Marcos, Spínola Rodrigo. Impacts of Agile Requirements Documentation Debt on Software Projects: A Retrospective Study. 31st Annual ACM Symposium on Applied Computing, Pisa, Italy, 2016.
+												</p>
+											</li>
+											<li>
+												<p>
+													Mendes, T. S.; Almeida, D.; Alves, N.S.R; Spínola, R.O.; Novais, R.L.; Mendonça, M. Visminer – An Open Source Tool to Support the Monitoring of the Technical Debt Evolution using Software Visualization. In: 17th International Conference on Enterprise Information Systems (ICEIS), 2015, Barcelona.
+
+												</p>
+											</li>
+											<li>
+												<p>
+													Carvalho, L. P. S.; Novais, R. ; Mendonca Neto, M. G. . VisMinerService? A REST Web Service for Source Mining. In: http://vem2015.dcc.ufla.br/, 2015, Belo Horizonte. CBSOFT-VEM2015, 2015.
+												</p>
+											</li>
+											<li>
+												<p>
+													Alves, N.S.R.; Ribeiro, L.F.; Caires, V.; Mendes, T.S.; Spínola, R.O. Towards an Ontology of Terms on Technical Debt. In the Sixth International Workshop on Managing Technical Debt, Victoria, British Columbia. 2014.
+												</p>
+											</li>
+											<li>
+												<p>
+													Mendes, T. S.; Identification and Management of Technical Debt using Software Visualization Resources, ICSE 2017 PhD and Young Researchers Warm Up Symposium, Maceió, 2014.
+												</p>
+											</li>
+											<li>
+												<p>
+													Mendes, T. S.; Identificação e Gerenciamento da Dívida técnica na Evolução e Manutenção de Software Utilizando Recursos de Visualização de software, The First Latin-American School on Software Engineering: Basics and State-of-the-Art, Rio de Janeiro, 2013.
+												</p>
+											</li>
+										</ul>
+								</header>
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section>
+							<h2>Download & Installation</h2>
+							<p>RepositoryMiner - <a href="https://github.com/visminer/repositoryminer">Click Here</a>
+							<p>VisminerTD-Service - <a href="https://github.com/visminer/visminertd-service">Click Here</a>
+							<p>VisminerTD-Client - <a href="https://github.com/visminer/visminertd-client">Click Here</a>
+							</p>
+							<ul class="icons">
+								<li><a href="https://github.com/visminer" class="icon fa-github alt"><span class="label">GitHub</span></a></li>
+							</ul>
+						</section>
+						<section>
+							<h2>Contact</h2>
+							<dl class="alt">
+								<dt>Address</dt>
+								<dd>Department of Computer Science</dd>
+								<dd>Federal University of Bahia</dd>
+								<dd>Av Adhemar de Barros, s/n, Instituto de Matemática</dd>
+								<dd>Salvador, Bahia, Brazil</dd>
+								<dt>Phone</dt>
+								<dd>+55 71 99282-6241</dd>
+								<dt>Email</dt>
+								<dd><a href="#">thiagosouto@ifba.edu.br</a></dd>
+							</dl>
+						</section>
+						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
